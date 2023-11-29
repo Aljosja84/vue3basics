@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        .button {
+            width: 200px;
+            height: 40px;
+            font-size:24px;
+
+        }
+
+        .text-red {
+            color: red;
+        }
+
+        .text-green {
+            color: green;
+        }
+    </style>
 </head>
 <body>
+<div id="app">
+    <app-button></app-button>
+</div>
 
+<script>
+    let app = {
+        components: {
+            'app-button': {
+                template: '<button class="bg-gray-200 hover:bg-gray-400 border border-black rounded px-5 py-2">Zeg Hallo</button>',
+                mounted() {
+                    //
+                }
+            }
+        }
+    }
+    Vue.createApp(app).mount('#app');
+</script>
 </body>
 </html>
