@@ -36,16 +36,12 @@
     <app-button></app-button>
 </div>
 
-<script>
+<script type="module">
+    import AppButton from "./js/components/AppButton.js";
     let app = {
         components: {
-            'app-button': {
-                template: '<button class="bg-gray-200 hover:bg-gray-400 border border-black rounded px-5 py-2">Zeg Hallo</button>',
-                mounted() {
-                    //
-                }
+            'app-button': AppButton
             }
-        }
     }
     Vue.createApp(app).mount('#app');
 </script>
